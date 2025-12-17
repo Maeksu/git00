@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ScalpAI Demo - AI 기반 초단기 트레이딩 전략 추천" />
+  <title>ScalpAI Demo | 정영수 Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="min-h-dvh bg-[#070B18] text-white">
+    <canvas id="snowCanvas" aria-hidden="true" class="pointer-events-none fixed inset-0 z-0 opacity-60"></canvas>
+
+    <header class="relative z-10 border-b border-white/10 bg-[#070B18]/70 backdrop-blur-xl">
+      <div class="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3">
+        <a href="../index.html" class="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/5 hover:text-white">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+          포트폴리오로
+        </a>
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          오픈 준비중
+        </div>
+      </div>
+    </header>
+
+    <main class="relative z-10 mx-auto w-full max-w-5xl px-4 py-10 sm:py-14">
+      <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <section class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-8">
+          <p class="text-xs tracking-[0.22em] text-white/60">PRE-LAUNCH</p>
+          <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">ScalpAI</h1>
+          <p class="mt-3 max-w-2xl text-sm leading-relaxed text-white/70">
+            현재 데모는 <span class="font-semibold text-white/90">오픈 준비중</span>입니다.
+            제품의 핵심 컨셉(전략 생성 → 요약 → 시각화 → 알림)을 보여줄 수 있도록, 출시 전 페이지를
+            '미니 랜딩' 형태로 구성했습니다.
+          </p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                핵심 가치
+              </div>
+              <p class="mt-2 text-sm text-white/70">초단기 매매 전략을 더 빠르게 이해·결정</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                출시 준비
+              </div>
+              <p class="mt-2 text-sm text-white/70">지표/모델 성능 검증 및 UI 시각화 고도화</p>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl border border-white/10 bg-black/25 p-4">
+            <p class="text-sm font-semibold">출시 전 공개할 것</p>
+            <ul class="mt-3 space-y-2 text-sm text-white/70">
+              <li class="flex gap-2">
+                <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-white/60"></span>
+                <span>전략 결과 리포트(샘플) 템플릿 공개</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-white/60"></span>
+                <span>차트 기반 시각화(시그널/손익) 개선</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-white/60"></span>
+                <span>알림(메시지 포맷) UI 데모 추가</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="../index.html" class="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90">
+              홈으로 돌아가기
+              <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+            </a>
+            <a href="mailto:ysking1127@gmail.com" class="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10">
+              진행사항 문의
+              <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            </a>
+          </div>
+        </section>
+
+        <aside class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8">
+          <div class="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-transparent p-5">
+            <div class="flex items-center gap-2 text-sm font-semibold">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+              Mini Landing
+            </div>
+            <p class="mt-2 text-sm text-white/70">
+              '미완성'이어도 클릭했을 때 허전하지 않게,
+              제품의 메시지와 다음 단계를 한 눈에 보여주는 페이지로 구성했습니다.
+            </p>
+          </div>
+
+          <div class="mt-4 grid gap-3">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-xs text-white/60">Status</p>
+              <p class="mt-1 text-sm font-semibold">Preparing to Launch</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-xs text-white/60">ETA</p>
+              <p class="mt-1 text-sm font-semibold">TBD</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <script src="../app.js"></script>
+  <script>
+    // Snow canvas for demo page
+    function initSnowCanvas() {
+      const canvas = document.getElementById('snowCanvas');
+      if (!canvas) return;
+      
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) return;
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let raf = 0;
+      let width = 0;
+      let height = 0;
+      let dpr = 1;
+
+      const flakes = [];
+      const flakeCount = 95;
+
+      const rand = (min, max) => min + Math.random() * (max - min);
+      
+      const resize = () => {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = Math.floor(window.innerWidth);
+        height = Math.floor(window.innerHeight);
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      };
+
+      const resetFlake = (f, y) => {
+        f.x = rand(0, width);
+        f.y = y;
+        f.r = rand(0.8, 2.5);
+        f.vx = rand(-0.18, 0.25);
+        f.vy = rand(0.55, 1.35);
+        f.a = rand(0.25, 0.85);
+      };
+
+      resize();
+      flakes.length = 0;
+      for (let i = 0; i < flakeCount; i++) {
+        const f = { x: 0, y: 0, r: 0, vx: 0, vy: 0, a: 0 };
+        resetFlake(f, rand(-height, height));
+        flakes.push(f);
+      }
+
+      const tick = () => {
+        ctx.clearRect(0, 0, width, height);
+        for (const f of flakes) {
+          f.x += f.vx;
+          f.y += f.vy;
+          if (f.y > height + 10) resetFlake(f, -10);
+          if (f.x < -10) f.x = width + 10;
+          if (f.x > width + 10) f.x = -10;
+
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(255,255,255,${f.a})`;
+          ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        raf = window.requestAnimationFrame(tick);
+      };
+
+      const onResize = () => resize();
+      window.addEventListener('resize', onResize);
+      raf = window.requestAnimationFrame(tick);
+    }
+
+    document.addEventListener('DOMContentLoaded', initSnowCanvas);
+  </script>
+</body>
+</html>
+

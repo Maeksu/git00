@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PhishTrainer Demo - 실전형 피싱 메일 시뮬레이션 & 보안 인식 교육" />
+  <title>PhishTrainer Demo | 정영수 Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="min-h-dvh bg-[#070B18] text-white">
+    <canvas id="snowCanvas" aria-hidden="true" class="pointer-events-none fixed inset-0 z-0 opacity-60"></canvas>
+
+    <header class="relative z-10 border-b border-white/10 bg-[#070B18]/70 backdrop-blur-xl">
+      <div class="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3">
+        <a href="../index.html" class="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/5 hover:text-white">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+          포트폴리오로
+        </a>
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+          공사중
+        </div>
+      </div>
+    </header>
+
+    <main class="relative z-10 mx-auto w-full max-w-5xl px-4 py-10 sm:py-14">
+      <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <section class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-8">
+          <p class="text-xs tracking-[0.22em] text-white/60">DEMO PREVIEW</p>
+          <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">PhishTrainer</h1>
+          <p class="mt-3 max-w-2xl text-sm leading-relaxed text-white/70">
+            현재 데모는 <span class="font-semibold text-white/90">공사중</span>입니다.
+            다만 '완성되면 어떤 경험이 될지'가 보이도록, 화면 컨셉/흐름/톤은 먼저 잡아두었습니다.
+          </p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                목표
+              </div>
+              <p class="mt-2 text-sm text-white/70">실전형 피싱 시나리오로 보안 인식 훈련</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                진행 상태
+              </div>
+              <p class="mt-2 text-sm text-white/70">UI/시나리오 보강 및 테스트 플로우 정리 중</p>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl border border-white/10 bg-black/25 p-4">
+            <p class="text-sm font-semibold">이번 주 작업 체크리스트</p>
+            <ul class="mt-3 space-y-2 text-sm text-white/70">
+              <li class="flex gap-2">
+                <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-white/60"></span>
+                <span>메일 템플릿/발송 흐름 정리</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-white/60"></span>
+                <span>훈련용 랜딩/경고 UX 개선</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-white/60"></span>
+                <span>사용자 행동 로그 수집 설계(열람/클릭)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="../index.html" class="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90">
+              홈으로 돌아가기
+              <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+            </a>
+            <a href="mailto:ysking1127@gmail.com" class="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10">
+              진행상황 문의
+              <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            </a>
+          </div>
+        </section>
+
+        <aside class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8">
+          <div class="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-transparent p-5">
+            <p class="text-sm font-semibold">공사중이지만, 분위기는 미리</p>
+            <p class="mt-2 text-sm text-white/70">
+              데모 페이지 자체도 '그럴듯하게' 보이도록 톤앤매너를 맞췄습니다.
+              출시 전까지는 이 페이지가 상태 페이지(스테이터스) 역할을 합니다.
+            </p>
+          </div>
+
+          <div class="mt-4 grid gap-3">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-xs text-white/60">Status</p>
+              <p class="mt-1 text-sm font-semibold">Under Construction</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-xs text-white/60">Next</p>
+              <p class="mt-1 text-sm font-semibold">플로우 데모 / 시나리오 강화</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <script src="../app.js"></script>
+  <script>
+    // Snow canvas for demo page
+    function initSnowCanvas() {
+      const canvas = document.getElementById('snowCanvas');
+      if (!canvas) return;
+      
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) return;
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let raf = 0;
+      let width = 0;
+      let height = 0;
+      let dpr = 1;
+
+      const flakes = [];
+      const flakeCount = 95;
+
+      const rand = (min, max) => min + Math.random() * (max - min);
+      
+      const resize = () => {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = Math.floor(window.innerWidth);
+        height = Math.floor(window.innerHeight);
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      };
+
+      const resetFlake = (f, y) => {
+        f.x = rand(0, width);
+        f.y = y;
+        f.r = rand(0.9, 2.6);
+        f.vx = rand(-0.15, 0.2);
+        f.vy = rand(0.55, 1.25);
+        f.a = rand(0.25, 0.85);
+      };
+
+      resize();
+      flakes.length = 0;
+      for (let i = 0; i < flakeCount; i++) {
+        const f = { x: 0, y: 0, r: 0, vx: 0, vy: 0, a: 0 };
+        resetFlake(f, rand(-height, height));
+        flakes.push(f);
+      }
+
+      const tick = () => {
+        ctx.clearRect(0, 0, width, height);
+        for (const f of flakes) {
+          f.x += f.vx;
+          f.y += f.vy;
+          if (f.y > height + 10) resetFlake(f, -10);
+          if (f.x < -10) f.x = width + 10;
+          if (f.x > width + 10) f.x = -10;
+
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(255,255,255,${f.a})`;
+          ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        raf = window.requestAnimationFrame(tick);
+      };
+
+      const onResize = () => resize();
+      window.addEventListener('resize', onResize);
+      raf = window.requestAnimationFrame(tick);
+    }
+
+    document.addEventListener('DOMContentLoaded', initSnowCanvas);
+  </script>
+</body>
+</html>
+
