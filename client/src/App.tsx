@@ -21,7 +21,7 @@ type Project = {
   subtitle: string
   description: string
   tags: string[]
-  links: { label: string; href: string; kind?: 'video' }[]
+  links: { label: string; href: string; kind?: 'video' | 'external' }[]
 }
 
 const GITHUB_URL = 'https://github.com/Maeksu/git00.git'
@@ -229,14 +229,21 @@ function App() {
         ],
         links: [{ label: 'Site', href: 'https://todaytoyou.pages.dev/' }],
       },
-      {
-        title: 'BetweenDays',
-        subtitle: '기록 및 통계 분석 일기 앱 (Mobile)',
-        description:
-          '일상을 기록하고 카테고리/시간대별로 자동 분류하여 감정 흐름을 파악할 수 있는 일기 앱입니다. 검색·필터·정렬과 통계 대시보드(원형 차트/막대 차트)로 패턴을 객관적으로 이해할 수 있도록 설계했습니다.',
-        tags: ['Android', 'Kotlin', 'MVVM', 'Room DB', 'Coroutines', 'LiveData', 'MPAndroidChart', 'Material 3'],
-        links: [{ label: '구현 영상', href: '/videos/betweendays.mp4', kind: 'video' }],
-      },
+        {
+      title: 'BetweenDays',
+      subtitle: '기록 및 통계 분석 일기 앱 (Mobile)',
+      description:
+        '일상을 기록하고 카테고리/시간대별로 자동 분류하여 감정 흐름을 파악할 수 있는 일기 앱입니다. 검색·필터·정렬과 통계 대시보드(원형 차트/막대 차트)로 패턴을 객관적으로 이해할 수 있도록 설계했습니다.',
+      tags: ['Android', 'Kotlin', 'MVVM', 'Room DB', 'Coroutines', 'LiveData', 'MPAndroidChart', 'Material 3'],
+      links: [
+        { 
+          label: '구현 영상', 
+          href: 'https://youtube.com/shorts/9ta2YhkPiaA?si=fWqUfPzhsRbXOOoV', 
+          kind: 'external'  // 'video'에서 'external' 또는 'youtube'로 변경
+        }
+      ],
+    },
+
     ],
     []
   )
