@@ -40,7 +40,10 @@ const projects = [
       'Vercel',
       'Render',
     ],
-    links: [{ label: 'Site', href: 'https://mbti-hub.vercel.app/' }],
+    links: [
+      { label: 'Site', href: 'https://mbtihub.vercel.app/' },
+      { label: '구현 영상', href: 'https://youtu.be/8ohjJ3B6OTs' },
+    ],
   },
   {
     title: 'BetweenDays',
